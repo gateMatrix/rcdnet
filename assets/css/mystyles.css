@@ -1,0 +1,165 @@
+body{
+    font-family: roboto !important;
+}
+.auth-subtitle{
+	font-size: 1.2em !important;
+	line-height: 1.2em !important;
+}
+#auth #auth-left .auth-logo img {
+    height: 4rem !important;
+}
+#auth #auth-left .auth-logo {
+    margin-bottom: 3rem !important;
+}
+#auth #auth-left .auth-title {
+    font-size: 2rem !important;
+    margin-bottom: 1rem;
+}
+.sidebar-wrapper {
+    background-color: var(--bs-body-bg) !important;
+} 
+.sidebar-wrapper .sidebar-header img {
+    height: 3.3rem !important;
+}
+#auth #auth-right {
+    background: url(../../assets/images/bg/login.jpg) !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    height: 100%;
+}
+.namba{
+    background: #000;
+    color: #fff;
+    margin-left: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.myavata{
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 1em;
+    background: #4fbe87;
+    padding: 10px 10px 10px 10px;
+    text-transform: uppercase;
+    margin-right: 10px;
+}
+.mycomment{ 
+    margin-
+}
+.mybtn{
+    margin-bottom: 0px !important;
+}
+.student-img{
+    width: 100%; 
+    height: 300px; 
+    object-fit: cover;
+    object-position: 50% 0%; 
+}
+
+.avatar.avatar-lg img {
+    font-size: 1.2rem;
+    height: 120px !important;
+    width: 120px !important;
+}
+.student-name{
+    text-align: center !important;
+    font-size: 1em !important;
+}
+.mt-5 {
+    margin-top: 0rem !important;
+}
+.btn-primary {
+    background-color: #198754;
+    border-color: #198754;
+    color: #fff;
+}
+.sidebar-wrapper .menu .sidebar-item.active>.sidebar-link {
+    background-color: #198754 !important;
+}
+.myavatar img {
+    border-radius: 5px !important;
+    height: 200px !important;
+    display: block;
+    border-width: 4px;
+    border-style: solid;
+    margin-left: auto;
+  margin-right: auto;
+}
+.student-img-profile {
+    width: 50% !important;
+    height: 100px !important;
+    object-fit: cover;
+    object-position: 50% 0%;
+}
+.greyform{
+    background: #D9EEE1 !important;
+    padding: 20px;
+    border-radius: 5px;
+}
+.headingg{
+    width: 40% !important;
+    font-weight: 600;
+}
+.headingvalue{
+    width: 50% !important;
+    float: right;
+}
+.sidebar-wrapper .menu .submenu .submenu-item a {
+    color: #25396f;
+    display: block;
+    font-size: .85rem;
+    font-weight: 600;
+    letter-spacing: .5px;
+    padding: 0.3rem 1rem !important;
+    transition: all .3s;
+}
+.report-wrapper{
+    padding: 50px;
+    border-style: solid;
+    border-width: 8px;
+    border-color: #e6e6e6;
+}
+.protitle{
+    font-size: 1.4em;
+    border-style: solid;
+    border-width: 1px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    background: grey;
+    color: #fff;
+} 
+.actionpoints{
+    border-style: solid;
+    border-width: 1px;
+    padding: 12px;
+}
+.sidebar-wrapper .menu .sidebar-link {
+    padding: 0.5rem 0.7rem !important;
+}
+.sidebar-wrapper .sidebar-header {
+    padding-bottom: 0rem !important;
+}
+.choices__list--dropdown {
+    z-index: 100 !important;
+}
+
+#auth #auth-left {
+    padding: 3rem 2rem !important;
+    margin-top: 120px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.96);
+}
+.card {
+    border-radius: 0rem !important;
+}
+.btn {
+    border-radius: 0rem !important;
+}
+.sidebar-wrapper .menu .sidebar-link {
+    border-radius: 0rem !important;
+}
+.smallpara{
+    font-size: 0.75em !important;
+    color: #ababab;
+}
