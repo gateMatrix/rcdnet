@@ -23,7 +23,7 @@
             <div class="auth-logo">
                 <a href="index.html"><img src="assets/images/logo/rcdnetlogo.png" alt="Logo"></a>
             </div>
-            <p class="auth-subtitle mb-5">Log in with your data that you entered during registration.</p>
+            <p class="auth-subtitle mb-5">Login with your data that you entered during registration.</p>
 
             <form action="authentication.php" method="POST">
                 <div class="form-group position-relative has-icon-left mb-4">
