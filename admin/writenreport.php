@@ -40,14 +40,14 @@
                     
                     $reportid  = $_GET['id'];
  
-                    $sql = "SELECT * FROM writtenrep WHERE repID = '$reportid' "; 
+                    $sql = "SELECT * FROM writtenrep INNER JOIN users ON writtenrep.user=users.userID WHERE  writtenrep.repID = '$reportid' "; 
                     $result = mysqli_query($con, $sql);
                     $row = mysqli_fetch_assoc($result);  
                     echo '<p class="protitle"> Activity Report </p>';
                     echo '<p style="text-align: center;">'.$row['month'].' '.$row['year'].' </p>';
 
                     echo "<div class='actionpoints'>"."<p style='font-weight: 600; text-decoration: underline;'>". $row['reportNote']."</div>";
-                    echo "<p> Prepared By Mugisha </p>";
+                    echo "<p> Prepared By ". $row['fullname']. "</p>";
                     ?>
                 </div>
             </div>
