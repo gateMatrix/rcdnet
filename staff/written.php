@@ -84,17 +84,17 @@ if (isset($_POST['post'])){
     </div>
     </div>
 
-    <div class="col-md-4">
+    <div class="col-md-4"> 
     <div class="form-group">
     <label for="basicInput">Project Name</label>
     <select class="choices form-select" name="project">
     <?php
     include "../includes/connection.php";
-    $sql = "SELECT * FROM bencategory";
+    $sql = "SELECT * FROM project";
     if($result = mysqli_query($con, $sql)){
         if(mysqli_num_rows($result) > 0){
             while($row = mysqli_fetch_array($result)){
-                    echo '<option value='.$row['bid'].'>' . $row['bname'] . '</option>';
+                    echo '<option value='.$row['prID'].'>' . $row['name'] . '</option>';
             }
             mysqli_free_result($result);
         } else{
