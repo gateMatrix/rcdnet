@@ -46,8 +46,7 @@
 <?php
 $myid = $_SESSION['userid'];
 
-
-$sql = "SELECT * FROM writtenrep"; 
+$sql = "SELECT * FROM writtenrep INNER JOIN users ON writtenrep.user=users.userID  ";
 if($result = mysqli_query($con, $sql)){
     if(mysqli_num_rows($result) > 0){
         echo "<table class='table table-striped' id='table5'>";
@@ -55,6 +54,7 @@ if($result = mysqli_query($con, $sql)){
              echo "<tr>";
                 echo "<th>Date</th>";
                 echo "<th>Name</th>";
+                echo "<th>Written By</th>";
                 echo "<th>Month</th>";
                 echo "<th>Year</th>";
             echo "</tr>";
@@ -62,12 +62,13 @@ if($result = mysqli_query($con, $sql)){
         while($row = mysqli_fetch_array($result)){
             echo "<tr>";
                 echo "<td>" . $row['date'] . "</td>";
-                echo "<td>" . $row['name'] . "</td>";
+                echo "<td>" . $row['name'] . "</td>"; 
+                echo "<td>" . $row['fullname']. "</td>";
                 echo "<td>" . $row['month'] . "</td>";
                 echo "<td>" . $row['year'] . "</td>";
                 echo "<td>" . "<a href='writenreport.php?id=".$row['repID']."  'class='badge bg-info'> Open</a>
-                               <a href='#?id=".$row['repID']."  'class='badge bg-success'>Edit</a>
-                               <a href='#?id=".$row['repID']."  'class='badge bg-danger' onclick='return DeleteConfirm()'>Trash</a>";
+                   <a href='#?id=".$row['repID']."  'class='badge bg-success'>Edit</a>
+                   <a href='deletewritten.php?id=".$row['repID']."  'class='badge bg-danger' onclick='return DeleteConfirm()'>Trash</a>";
                 echo "</td>";
             echo "</tr>";  
         }

@@ -64,8 +64,9 @@ if($result = mysqli_query($con, $sql)){
                 echo "<th></th>";
                 echo "<th>Date</th>";
                 echo "<th>Name</th>";
+                echo "<th>Uploaded By</th>";
                 echo "<th>Type</th>";
-                echo "<th>Status</th>";  
+                echo "<th>Action</th>";  
             echo "</tr>";
             echo "</thead>";
         while($row = mysqli_fetch_array($result)){
@@ -73,10 +74,13 @@ if($result = mysqli_query($con, $sql)){
                 echo '<td><i style="font-size: 1.4em;" class="bi bi-file-earmark-text"></i></td>';
                 echo "<td>" . $row['date'] . "</td>";
                 echo "<td>" . $row['name'] . "</td>";
+                $author = explode(' ', trim($row['fullname'])); 
+                echo "<td>" . $author[1] . "</td>";
                 echo "<td>" . $row['category'] . "</td>";
                 echo "<td>" . "<a target='_blank' href='../docs/".$row['file']."' class='badge bg-success'>Download</a>";
+                echo "<td>" . "<a href='deleterep.php?id=".$row['repID']."' class='badge bg-danger' onclick='return DeleteConfirm()'>Delete</a>". "</td>";
             echo "</tr>";
-        } 
+        }  
         echo "</table>";
         // Free result set
         mysqli_free_result($result);
@@ -87,6 +91,7 @@ if($result = mysqli_query($con, $sql)){
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
 }
 ?>
+
 
             </div>
         </div>
@@ -117,7 +122,7 @@ if($result = mysqli_query($con, $sql)){
 </script>
 <script>
     function DeleteConfirm() {
-      return confirm("Are you sure to delete this beneficiary");
+      return confirm("Are you sure to delete this document");
      }
  </script>
 </html>

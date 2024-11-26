@@ -65,12 +65,12 @@ if($result = mysqli_query($con, $sql)){
             echo "</tr>";
             echo "</thead>";
         while($row = mysqli_fetch_array($result)){
-            echo "<tr>";
+            echo "<tr>"; 
                 echo "<td>" . $row['fullname'] . "</td>";
                 echo "<td>" . $row['role'] . "</td>";
                 echo "<td>" . "<a href='#' class='badge bg-success'>Manage</a> <a href='deleteuser.php?id=".$row['userID']."' class='badge bg-danger' onclick='return DeleteConfirm()'>Delete</a>". "</td>";
             echo "</tr>";
-        }
+        } 
         echo "</table>";
         // Free result set
         mysqli_free_result($result);
@@ -96,7 +96,7 @@ if($result = mysqli_query($con, $sql)){
             <footer>
                 <div class="footer clearfix mb-0 text-muted">
                     <div class="float-start">
-                        <p>Created by <a href="http://julybrands.co.ug">JulyBrands Digital</a></p>
+                        <p>Created by <a href="http://julybrands.co.ug">JulyBrands Digital</a> </p>
                     </div>
                 </div>
             </footer>
